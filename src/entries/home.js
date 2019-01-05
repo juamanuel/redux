@@ -1,14 +1,19 @@
 import React from 'react';
 import { render } from 'react-dom';
 import Home from '../pages/containers/home';
-import data from '../api.json';
+//import data from '../api.json';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducer from '../reducers/data'
+import data from '../schemas/index'
+
+console.log(data)
 
 const initialState = {
     data: {
-        ...data,
+     //   ...data,
+     entities: data.entities,
+     categories: data.result.categories
     },
     search: []
 }
